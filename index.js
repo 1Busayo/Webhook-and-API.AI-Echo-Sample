@@ -29,7 +29,7 @@ restService.use(bodyParser.json());
 });*/
 
 
-restService.post("/v2/echo", function(req, res) {
+restService.post("/echo", function(req, res) {
   var speech =
     req.body.result &&
     req.body.result.parameters &&
