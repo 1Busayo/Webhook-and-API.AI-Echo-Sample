@@ -39,22 +39,22 @@ restService.post("/echo", function(req, res) {
   return res.json({
   
 
-  "fulfillmentText": speech,
-  "fulfillmentMessages": [
+  fulfillmentText: speech,
+  fulfillmentMessages: [
     {
       object(Message)
     }
   ],
-  "source": speech,
-  "payload": {
+  source: "webhook-echo-sample",
+  payload: {
     object
   },
-  "outputContexts": [
+  outputContexts: [
     {
       object(Context)
     }
   ],
-  "followupEventInput": {
+  followupEventInput: {
     object(EventInput)
   },
 
