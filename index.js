@@ -28,19 +28,26 @@ restService.use(bodyParser.json());
 });
 */
 
-restService.post("/echo", function(req, res) {
-  var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
-  return res.json({
-    fulfillmentText: speech,
-    fulfillmentMessages: speech,
-    source: "webhook-echo-sample"
-  });
-});
+{
+  "fulfillmentText": speech,
+  "fulfillmentMessages": [
+    {
+      object(Message)
+    }
+  ],
+  "source": speech,
+  "payload": {
+    object
+  },
+  "outputContexts": [
+    {
+      object(Context)
+    }
+  ],
+  "followupEventInput": {
+    object(EventInput)
+  },
+}
 
 restService.post("/audio", function(req, res) {
   var speech = "";
