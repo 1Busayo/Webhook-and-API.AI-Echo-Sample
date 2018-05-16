@@ -47,10 +47,7 @@ restService.post("/echo", function(req, res) {
           ]
         }
       }
-    ],
-    "webhookSource": "webhook-echo-sample"
- 
- 
+    ], 
   });
 });
 
