@@ -13,22 +13,6 @@ restService.use(
 
 restService.use(bodyParser.json());
 
-/*restService.post("/echo", function(req, res) {
-  var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
-  return res.json({
-    speech: speech,
-    displayText: speech,
-    source: "webhook-echo-sample"
-  });
-});
-*/
-
-
 restService.post("/echo", function(req, res) {
   var speech =
     req.body.result &&
@@ -37,29 +21,14 @@ restService.post("/echo", function(req, res) {
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   return res.json({
-  
-
-  fulfillmentText: speech,
-  fulfillmentMessages: [
-    {
-      object(Message)
-    }
-  ],
-  source: "webhook-echo-sample",
-  payload: {
-    object
-  },
-  outputContexts: [
-    {
-      object(Context)
-    }
-  ],
-  followupEventInput: {
-    object(EventInput)
-  },
-
+    //speech: speech,
+    fulfillmentText: speech,
+    displayText: speech,
+    source: "webhook-echo-sample"
   });
 });
+
+
 
 restService.post("/audio", function(req, res) {
   var speech = "";
