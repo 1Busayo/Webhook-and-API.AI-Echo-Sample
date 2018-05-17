@@ -39,11 +39,8 @@ restService.post("/echo", function(req, res) {
   return res.json({
 
     "fulfillmentText": speech,
-    "fulfillmentMessages": [
-    {
-      object(Message)
-    }
-  ]
+   
+   "webhookSource":"webhook-sample-source" 
   });
 });
 
