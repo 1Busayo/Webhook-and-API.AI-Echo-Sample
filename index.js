@@ -40,14 +40,10 @@ restService.post("/echo", function(req, res) {
 
     "fulfillmentText": speech,
     "fulfillmentMessages": [
-      {
-        "text": {
-          "text": [
-          speech
-          ]
-        }
-      }
-    ], 
+    {
+      object(Message)
+    }
+  ]
   });
 });
 
